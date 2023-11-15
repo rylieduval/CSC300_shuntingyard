@@ -10,6 +10,13 @@ public class ShuntingYard {
         this.ReversePolish = new OutputQueue();
     }
 
+    //parse a math expression into a linked list
+    //input: the math expression as a string
+    //parsed result will stored in Tokens linked list
+    public void parse(String input){
+
+    }
+
     /*
      * 1.  While there are tokens to be read:
      * 2.        Read a token
@@ -25,10 +32,8 @@ public class ShuntingYard {
      * 12.             Pop the left bracket from the stack and discard it
      * 13. While there are operators on the stack, pop them to the queue
      */
-    //parse a math expression into a linked list using Shunting Yard algorithm
-    //input: the math expression as a string
-    //parsed result will stored in ReversePolish
-    public void read(String input){
+    //take the tokens from Tokens queue, and stored the reversed polish expression in ReversePolish queue
+    public void process(){
         //to do
     }
 
@@ -42,7 +47,7 @@ public class ShuntingYard {
      */
     //process use the reverse polish format of expression to process the math result
     //output: the math result of the expression
-    public int process(){
+    public int run(){
         //to do
         throw new Error("waiting for implement");
     }
