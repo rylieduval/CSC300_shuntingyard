@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         ShuntingYard a = new ShuntingYard();
         a.read("(4+3)*5+(6-1)");
-        System.out.println(a.process());
+        System.out.println("Reversed Polish: " + a.ReversePolish);
+        System.out.println("Expressioin result is: " + a.process());
     }
 }

@@ -70,4 +70,15 @@ public class LinkedList {
     public int getLength(){
         return this.Size;
     }
+
+    @Override 
+    public String toString(){
+        String output = "";
+        Node node = this.Head;
+        while(node != null){
+            output += node.Data;
+            node = node.NextNode;
+        }
+        return output;
+    }
 }
