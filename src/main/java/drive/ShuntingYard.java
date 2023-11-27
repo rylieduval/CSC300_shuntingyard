@@ -80,32 +80,36 @@ public class ShuntingYard {
         String s = "*+/-";
         int x;
         int y;
-        while(!ReversePolish.isEmpty()) {
-	temp = ReversePolish.dequeue().Data;
-	if(temp.indexOf(s) >= 0) {
-		x = Integer.parseInt(tempstack.pop().Data);
-		y = Integer.parseInt(tempstack.pop().Data);
-	switch (temp.charAt(0)) {
-	    case '*':
-		x = y * x;
-		break;
-	    case '/':
-		x = y / x;
-		break;
-	    case '+':
-		x = y + x;
-		break;
-	    case '-':
-		x = y - x;
-		break;
-	    default:
-		break;
-	}
+        while(!ReversePolish.isEmpty()) 
+	{
+		temp = ReversePolish.dequeue().Data;
+		if(temp.indexOf(s) >= 0) 
+		{
+			x = Integer.parseInt(tempstack.pop().Data);
+			y = Integer.parseInt(tempstack.pop().Data);
+			switch (temp.charAt(0)) {
+			    case '*':
+				x = y * x;
+				break;
+			    case '/':
+				x = y / x;
+				break;
+			    case '+':
+				x = y + x;
+				break;
+			    case '-':
+				x = y - x;
+				break;
+			    default:
+				break;
+		}
 		tempstack.push(Integer.toString(x));
-	} else {
-		tempstack.push(temp);
+	} 
+		else 
+		{
+			tempstack.push(temp);
+		}
 	}
-}
-        return Integer.parseInt(tempstack.pop().Data);
-    }  
+        	return Integer.parseInt(tempstack.pop().Data);
+   	}  
 }
